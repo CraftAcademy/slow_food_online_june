@@ -1,0 +1,9 @@
+language: ruby
+rvm: 2.3.1
+
+notifications:
+ email: false
+
+before_script: rails db:migrate
+
+script: bundle exec rake
