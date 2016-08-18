@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'pry'
+  gem 'coveralls', require: false
 end
 
 group :development do
