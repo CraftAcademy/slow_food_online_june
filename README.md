@@ -36,9 +36,8 @@ Once the source is on your machine run the following commands to install all the
 
 ```
 $ bundle install
-
-$ rake db:create
-$ rake db:migrate
+$ rails db:create
+$ rails db:migrate
 ```
 
 ### Contributors
