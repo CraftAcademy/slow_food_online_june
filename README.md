@@ -39,11 +39,11 @@ $ bundle install
 
 $ rake db:create
 $ rake db:migrate
-
+```
 
 ### Contributors
 [Mikael](https://github.com/MikaelFeher)
 [Lucia](https://github.com/luciademoja)
-[Lara](https://github.com/lollypop279
+[Lara](https://github.com/lollypop27)
 [Rodrigo](https://github.com/rdcsg)
 [Carl-Philip](https://github.com/callea2)
