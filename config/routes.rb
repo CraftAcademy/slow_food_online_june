@@ -3,7 +3,6 @@ Rails.application.routes.draw do
                                    sessions: :sessions}
 
   resources :restaurants, only: [:new, :create]
-
-  get 'landing_page/index'
   root 'landing_page#index'
+  resources :menus, only: [:new, :create]
 end

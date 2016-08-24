@@ -11,3 +11,8 @@ And(/^I should see a Google Map$/) do
   loop until all(:css, '#map .gm-style').length == 1
   expect(page).to have_css '.gm-style'
 end
+
+
+And(/^I fill "([^"]*)" with "([^"]*)"$/) do |field, value|
+  fill_in field, with: value
+end
