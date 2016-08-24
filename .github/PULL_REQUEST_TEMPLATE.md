@@ -7,6 +7,10 @@ Changes proposed in this pull request:
 - ...
 - ...
 
+What I have learned working on this feature:
+[If you don't put anything here you are doing it wrong!]
+
+
 
 Screenshots:
 [If you made some visual changes to the application please upload screenshots
