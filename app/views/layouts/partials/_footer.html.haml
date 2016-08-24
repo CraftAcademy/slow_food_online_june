@@ -1,10 +1,15 @@
-%footer
-  %nav
-    %p Copyright®
-    %ul.inline-list
-      %li
-        %a{href: "#{}"} Site Map
-      %li
-        %a{href: "#{}"} Contacts
-      %li
-        = link_to "Register your restaurant", new_user_registration_path
+%footer.footer
+  .row.expanded.callout.secondary
+    .row
+      .medium-4.columns
+        %ul.menu
+          %li
+            = link_to 'Site Map'
+          %li
+            = link_to 'Contact'
+          %li
+            = link_to 'Register your restaurant', new_user_registration_path
+
+      .medium-8.columns
+        %ul.menu.float-right
+          %li.menu-text © Slow Food Online | All Rights Reserved | Terms and Conditions Apply.
