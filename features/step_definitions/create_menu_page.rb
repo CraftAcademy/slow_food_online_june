@@ -14,6 +14,8 @@ Then(/^I should be on the "([^"]*)" page$/) do |expected_page|
       path = new_menu_path
     when 'signup' then
       path = new_user_registration_path
+    when 'restaurants' then
+      path = new_restaurant_path
   end
   expect(page.current_path).to eq path
 end

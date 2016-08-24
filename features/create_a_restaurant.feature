@@ -17,6 +17,7 @@ Feature: As a System user
     And I select "Italian" from "Select your cuisine"
     And I click on "Save"
     Then I should be on the "home" page
+    #This is a temporary redirect to root until the Dashboard is added
 
   Scenario: Restaurant create page fields not filled in
     Given I am on the "restaurants" page
