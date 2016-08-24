@@ -14,9 +14,8 @@ Feature: As a restaurant owner
     And I fill in "Password" with "password"
     And I fill in "Password confirmation" with "password"
     And I click on "Sign up"
-    Then I should be on the "home" page
-    # this is a temporary path, when the restaurant create page is finished this link will be replaced
-
+    Then I should be on the "restaurants" page
+    
   Scenario: Trying to sign up with empty fields
     Given I navigate to the "signup" page
     And I fill in "Email" with " "
