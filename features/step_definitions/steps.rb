@@ -24,11 +24,11 @@ private
 
 def path(pagename)
   case pagename
-    when 'home'
+    when "home"
       root_path
     when 'restaurants'
       new_restaurant_path
-    when 'signup'
+    when "signup"
       new_user_registration_path
     when 'create menu'
       new_menu_path
