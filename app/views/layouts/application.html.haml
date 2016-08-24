@@ -3,10 +3,12 @@
   %head
     %meta{content: 'text/html; charset=UTF-8', http: {equiv: 'Content-Type'}}/
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
-    %title SlowFoodOnline
+    = stylesheet_link_tag('/assets/stylesheets/foundation.css')
+    %title Slow Food Online
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+
   %body
     = render 'layouts/partials/header'
     = flash.each do |key, value|
