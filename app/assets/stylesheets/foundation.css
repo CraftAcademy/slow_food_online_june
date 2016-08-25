@@ -4167,7 +4167,7 @@ table.hover tr:nth-of-type(even):hover {
           animation-delay: 700ms !important; }
 
 .footer-menu a:active,
-.footer-menu a:link;
+.footer-menu a:link
   {color: #fff;}
 .footer-menu a:hover{
     color: #dc6504;
