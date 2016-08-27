@@ -3,8 +3,7 @@ Feature: As any user
   I need to be able to logout
 
   Scenario: Logout a user
-    Given I am on the "home" page
-    And I am logged in as a user of the system
-    Then show me the page
+    Given I am logged in as a user of the system
+    And I am on the "home" page
     And I click on "Logout"
-    Then show me the page
+    Then I should see "Signed out successfully."
