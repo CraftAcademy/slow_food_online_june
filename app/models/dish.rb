@@ -6,6 +6,6 @@ class Dish < ApplicationRecord
                         :menu,
                         :category
 
-  validates :category, inclusion: ['Starter', 'Main Course', 'Dessert']
+  validates :category, inclusion: CATEGORIES
 
 end
