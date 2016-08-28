@@ -16,8 +16,13 @@ end
 
 
 Given(/^I am logged in as a user of the system$/) do
-  user = FactoryGirl.create(:user)
-  login_as user
+  @user = FactoryGirl.create(:user)
+  login_as @user
+end
+
+Then(/^show me an image of the page$/) do
+  sleep(0.1) until page.evaluate_script('$.active') == 0
+  Capybara::Screenshot.screenshot_and_open_image
 end
 
 private
@@ -34,7 +39,14 @@ def path(pagename)
       new_menu_path
     when 'create dish'
       new_dish_path
+    when 'dashboard'
+      dashboard_path(@restaurant)
     else
       raise 'You have not defined a path yet'
   end
+end
+
+
+Given(/^I am logged out$/) do
+  logout
 end

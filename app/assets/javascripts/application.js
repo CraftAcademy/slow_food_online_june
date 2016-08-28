@@ -16,7 +16,9 @@
 //= require turbolinks
 ///= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function () {
+    $(document).foundation();
+});
 
 function fixedFooter() {
     var footer = $(".footer"); //or your footer class
@@ -28,16 +30,16 @@ function fixedFooter() {
     windowHeight = $(window).height();
     height = (windowHeight - footerPosition.top) - totalHeight;
     if (height > 0) {
-      footer.css({
-        'margin-top': (height) + 'px'
-      });
+        footer.css({
+            'margin-top': (height) + 'px'
+        });
     }
-  }
+}
 
-  $(document).ready(function () {
+$(document).ready(function () {
     fixedFooter(); //at page load
 
-  });
-  $(window).resize(function () {
+});
+$(window).resize(function () {
     fixedFooter(); //at page resize
-  });
+});

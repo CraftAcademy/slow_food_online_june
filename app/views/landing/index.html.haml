@@ -9,9 +9,9 @@
     %input{name: "location", placeholder: "Type in your location", type: "text"}
     %input{type: "submit", value: "Submit"}
   %br
-%div{style: 'width: 800px'}
-  #map{data: {test: {env: "#{Rails.env.test?}"}}, style: 'width: 800px; height: 400px; background-color: green;'}
-    %h2 Map
+
+#map{data: {test: {env: "#{Rails.env.test?}"}}}
+  %h2 Map
 %h2
   List of restaurants
 %ul

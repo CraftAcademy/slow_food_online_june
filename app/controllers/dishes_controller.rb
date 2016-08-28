@@ -16,6 +16,11 @@ class DishesController < ApplicationController
     end
   end
 
+  def show
+    @menu = Menu.find(params[:menu_id])
+    @dish = @menu.dishes.find_by(id: params[:id])
+  end
+
   private
 
   def dish_params
@@ -24,7 +29,8 @@ class DishesController < ApplicationController
                                  :allergy_info,
                                  :ingredients,
                                  :calories,
-                                 :category)
+                                 :category,
+                                 :description)
   end
 
 

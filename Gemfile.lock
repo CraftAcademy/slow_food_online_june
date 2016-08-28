@@ -53,11 +53,15 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (1.0.13)
+      capybara (>= 1.0, < 3)
+      launchy
     capybara-webkit (1.11.1)
       capybara (>= 2.3.0, < 2.8.0)
       json
     cliver (0.3.2)
     coderay (1.1.1)
+    colored (1.2)
     concurrent-ruby (1.0.2)
     coveralls (0.8.15)
       json (>= 1.8, < 3)
@@ -99,6 +103,8 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
+    faker (1.6.6)
+      i18n (~> 0.5)
     ffi (1.9.14)
     foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
@@ -276,12 +282,15 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  capybara-screenshot
   capybara-webkit
+  colored
   coveralls
   cucumber-rails
   database_cleaner
   devise
   factory_girl_rails
+  faker
   foundation-rails
   geocoder
   haml-rails (~> 0.9)

@@ -17,7 +17,9 @@ Then(/^I should be on the "([^"]*)" page$/) do |expected_page|
     when 'restaurants' then
       path = new_restaurant_path
     when 'create dish' then
-      path = new_menu_dish_path(@menu)
+      path = @menu ? new_menu_dish_path(@menu) : new_menu_dish_path(@restaurant.menus.first)
+    when 'dashboard'
+      path = dashboard_path(@restaurant)
     else
       raise 'You have not defined a path yet'
   end
@@ -28,5 +30,19 @@ end
 Given(/^that following menus exist$/) do |table|
   table.hashes.each do |menu|
     FactoryGirl.create(:menu, menu)
+  end
+
+  if @restaurant
+    Menu.all.each do |menu|
+      menu.update_attribute(:restaurant, @restaurant)
+    end
+  end
+end
+
+
+And(/^that following menus for "([^"]*)" exist$/) do |name, table|
+  @restaurant = Restaurant.find_by(name: name)
+  table.hashes.each do |menu|
+    FactoryGirl.create(:menu, menu.merge!(restaurant: @restaurant))
   end
 end

@@ -2,6 +2,7 @@ class Restaurant < ApplicationRecord
   include ActiveModel::Validations
 
   belongs_to :user
+  has_many :menus
   geocoded_by :full_address
 
   validates_presence_of :name,

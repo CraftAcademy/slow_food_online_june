@@ -12,3 +12,4 @@ Feature: As any user
 
   Scenario: Greeting the user when logged in
     Then I should see "Hello, admin@random.com"
+    

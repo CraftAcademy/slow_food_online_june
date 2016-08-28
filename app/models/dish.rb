@@ -4,7 +4,8 @@ class Dish < ApplicationRecord
   validates_presence_of :name,
                         :price,
                         :menu,
-                        :category
+                        :category,
+                        :description
 
   validates :category, inclusion: CATEGORIES
 

@@ -28,6 +28,7 @@ RSpec.describe Restaurant, type: :model do
 
   describe 'Relations' do
     it { is_expected.to belong_to :user }
+    it { is_expected.to have_many :menus }
   end
 
   describe 'Geocoder methods' do

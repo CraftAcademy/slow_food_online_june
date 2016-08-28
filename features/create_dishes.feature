@@ -11,6 +11,7 @@ Feature: As a system user
   Scenario: Create a dish
     And I fill "Name" with "Dish Name"
     And I fill "Price" with "3.00"
+    And I fill "Description" with "My description"
     And I fill "Allergy info" with "Peanuts"
     And I fill "Ingredients" with "Mince"
     And I fill "Calories" with "429"
@@ -24,4 +25,5 @@ Feature: As a system user
     And I click "Create"
     Then I should be on the "create dish" page
     And I should see "Name can't be blank"
+    And I should see "Description can't be blank"
     And I should see "Price can't be blank"

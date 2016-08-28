@@ -16,6 +16,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to have_db_column :ingredients }
     it { is_expected.to have_db_column :calories }
     it { is_expected.to have_db_column :category }
+    it { is_expected.to have_db_column :description }
   end
 
   describe 'Relationsships' do
@@ -27,6 +28,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to validate_presence_of :name}
     it { is_expected.to validate_presence_of :price}
     it { is_expected.to validate_presence_of :category}
+    it { is_expected.to validate_presence_of :description}
 
     it 'rejects custom categories' do
       record = FactoryGirl.build(:dish, category: 'Custom category')

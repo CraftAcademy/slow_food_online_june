@@ -12,6 +12,8 @@ gem 'haml-rails', '~> 0.9'
 gem 'foundation-rails'
 gem 'devise'
 gem 'geocoder'
+gem 'colored' #colors in terminal Used in seeds.rb
+gem 'faker'
 
 group :development, :test do
   gem 'pry'
@@ -23,6 +25,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'capybara-screenshot'
   gem 'launchy'
   gem 'poltergeist'
 end

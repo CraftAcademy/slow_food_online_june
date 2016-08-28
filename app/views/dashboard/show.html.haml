@@ -1,0 +1,31 @@
+.row
+  .large-12.columns
+    %h3
+      Dashboard for
+      = @restaurant.name
+.row
+  .large-3.columns#dash_links
+    %ul{style: 'list-style-type: none;'}
+      %li
+        = link_to 'Create a menu', new_menu_path, class: 'button expanded'
+      - if @restaurant.menus.any?
+        %li
+          = link_to "Add dish to #{@restaurant.menus.first.name}", new_menu_dish_path(@restaurant.menus.first), class: 'button expanded'
+      %li
+        = link_to 'Edit details', edit_restaurant_path(@restaurant), class: 'button expanded'
+      %li
+        = link_to 'My orders', '#', class: 'button expanded'
+      %li
+        = link_to 'Security settings', '#', class: 'button expanded'
+
+
+  .large-9.columns.dashboard-content
+    %p
+      Hello
+      = current_user.email
+    %p
+      This is your dashboard
+    %p
+      From here you can manage your restaurant details, create menus and add dishes.
+      %br
+        You can also manage your orders and handle your account security details.

@@ -1,0 +1,20 @@
+.row
+  .large-12.columns
+    %p
+      %small
+        = @menu.name
+    %h3
+      = @dish.name
+.row
+  .large-3.columns
+    %p.left
+      = ['Price:', @dish.price, 'kr'].join(' ') unless @dish.price.nil?
+    %p
+      = link_to 'Order', '#', class: 'button expanded'
+    %p= ['Allergy info:', @dish.allergy_info].join(' ') unless @dish.allergy_info.nil?
+    %p= ['Ingredients:', @dish.ingredients].join(' ') unless @dish.ingredients.nil?
+    %p= ['Calories:', @dish.calories, 'Kcal'].join(' ') unless @dish.calories.nil?
+
+  .large-9.columns
+    = image_tag "https://placeholdit.imgix.net/~text?txtsize=30&txt=#{@dish.name}&w=500&h=500"
+    %p= @dish.description
