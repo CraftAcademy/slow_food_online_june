@@ -8,7 +8,7 @@
           %li
             = link_to 'Contacts'
           %li
-            = link_to 'Register your restaurant', new_user_registration_path
+            = link_to 'Register your restaurant', new_user_registration_path unless current_user
 
       .medium-8.columns
         %ul.menu.float-right
