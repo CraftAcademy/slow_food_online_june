@@ -4,9 +4,11 @@ class MenusController < ApplicationController
   end
 
   def create
-    @menu = Menu.new(menu_params)
+    @restaurant = Restaurant.find_by(id: current_user.restaurants.first.id)
+    @menu = @restaurant.menus.build(menu_params)
     if @menu.save
-      redirect_to root_path
+      flash[:notice] = "#{@menu.name} created successfully"
+      redirect_to new_menu_dish_path(@menu)
     else
       flash[:error] = 'A name is required'
       redirect_to new_menu_path
@@ -16,7 +18,8 @@ class MenusController < ApplicationController
   private
 
   def menu_params
-    params.require(:menu).permit(:name)
+    params.require(:menu).permit(:name,
+                                 :restaurant)
   end
 
 

@@ -16,11 +16,10 @@ RSpec.describe Menu, type: :model do
   describe 'Relationships' do
     it { is_expected.to belong_to :restaurant }
     it { is_expected.to have_many :dishes }
-
   end
-
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :name}
+    it { is_expected.to validate_presence_of :restaurant}
   end
 end

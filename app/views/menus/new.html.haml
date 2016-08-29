@@ -1,6 +1,8 @@
 %h1 Create your custom menu!
 
-= form_for @menu do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.submit "Create"
+= form_for ([@restaurant,@menu]) do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit "Create"

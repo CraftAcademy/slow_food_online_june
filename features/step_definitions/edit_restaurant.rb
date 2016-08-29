@@ -12,6 +12,8 @@ Given(/^I am on the "([^"]*)" page for "([^"]*)"$/) do |page, name|
       visit edit_restaurant_path(restaurant)
     when 'dashboard'
       visit dashboard_path(restaurant)
+    when 'create menu'
+      visit new_menu_path
   end
 
 end

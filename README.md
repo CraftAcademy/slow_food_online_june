@@ -3,6 +3,8 @@
 Slow Food Online is a collaboration between 5 great minds, which attempts to fill the apparent void of user-friendly,
 interactive and well designed food ordering services.
 
+Check out the website as it's being built [**here**](https://slow-food-online-june.herokuapp.com/)
+
 ##Tools and technologies
 
 For this project we've used a bunch of quality tools and technologies which have aided us in the creation
