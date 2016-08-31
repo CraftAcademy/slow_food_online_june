@@ -19,8 +19,7 @@ Feature: As a system user
     And I fill "Calories" with "429"
     And I select "Starter" from "Select the category for your dish"
     And I click "Create"
-    Then I should be on the "home" page
-
+    Then I should be on the "dish show" page
     And I should see "Dish Name created successfully"
 
   Scenario: Reject when missing required values

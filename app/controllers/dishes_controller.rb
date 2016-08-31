@@ -9,7 +9,7 @@ class DishesController < ApplicationController
     @dish = @menu.dishes.build(dish_params)
     if @dish.save
       flash[:notice] = "#{@dish.name} created successfully"
-      redirect_to root_path
+      redirect_to menu_dish_path(@menu, @dish)
     else
       set_flash_message(@dish)
       redirect_to new_menu_dish_path(@menu)
