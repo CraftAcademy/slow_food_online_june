@@ -32,3 +32,7 @@ end
 And(/^I add a dish image$/) do
   attach_file('dish_image', File.join(Rails.root, '/spec/fixtures/pizza-300x300.jpg'))
 end
+
+Then(/^I should see image "([^"]*)"$/) do |image|
+  expect(page).to have_selector("img[src$='#{image}']")
+end
