@@ -7,7 +7,16 @@ addresses = {
             'city' => 'Gothenburg',
             'country' => 'Sweden',
             'country_code' => 'SE'
-        }
+        },
+    'Main Street 224, 12345, Skurup' =>
+      {
+        'latitude' => 55.4805,
+        'longitude' => 13.5023,
+        'address' => 'Main Street 224, 12345, Skurup',
+        'city' => 'Skurup',
+        'country' => 'Sweden',
+        'country_code' => 'SE'
+      }
 }
 
 
